@@ -18,7 +18,7 @@ app = Client(SESSION_NAME, API_ID, API_HASH)
 
 
 
-HELP =""" Lovely Radio stations:
+HELP =""" Alpha Radio stations:
 
 1. https://radioindia.net/radio/hungamanow/icecast.audio
 
@@ -28,8 +28,8 @@ HELP =""" Lovely Radio stations:
 
 4. https://radioindia.net/radio/hungamanow/icecast.audio
 
-ᴛᴏ ꜱᴛᴀʀᴛ ʀᴇᴘʟᴀʏ ᴛᴏ ᴛʜɪꜱ ᴍᴇꜱꜱᴀɢᴇ ᴡɪᴛʜ ᴄᴏᴍᴍᴀɴᴅ /lovely <Station Number> ʟɪᴋᴇ /lovely 1
-ᴛᴏ ᴇɴᴅ and ꜱᴛᴏᴘ ꜱᴛʀᴇᴀᴍ by /stop ᴄᴏᴍᴍᴀɴᴅ  for any help join @LOVELY_5UPPORT """
+ᴛᴏ ꜱᴛᴀʀᴛ ʀᴇᴘʟᴀʏ ᴛᴏ ᴛʜɪꜱ ᴍᴇꜱꜱᴀɢᴇ ᴡɪᴛʜ ᴄᴏᴍᴍᴀɴᴅ /alpha <Station Number> ʟɪᴋᴇ /alpha 1
+ᴛᴏ ᴇɴᴅ and ꜱᴛᴏᴘ ꜱᴛʀᴇᴀᴍ by /stop ᴄᴏᴍᴍᴀɴᴅ   """
 
 
 GROUP_CALLS = {}
@@ -44,7 +44,7 @@ async def help(client,message):
 		await message.reply_text(HELP)
 
 
-@app.on_message(filters.command('lovely', prefixes='/'))
+@app.on_message(filters.command('alpha', prefixes='/'))
 async def start(client,message):
 	get =await client.get_chat_member(message.chat.id,message.from_user.id)
 	status = get. status
